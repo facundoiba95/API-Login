@@ -26,6 +26,10 @@ app.post('/user',(req,res)=> {
     console.log(usuarios)
     res.send('se agrego usuario')
 })
+app.put('/user', (req,res)=> {
+    usuarios = req.body;
+    res.send('se actualizo usuario')
+})
 
 app.get('/user',(req,res)=> {
     res.send(usuarios)
