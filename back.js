@@ -12,27 +12,22 @@ que le indiquemos.
 //BODY-PARSER
 const bp = require('body-parser')
 app.use(bp.json())
-app.use(bp.urlencoded({extended: true}))
 app.use(cors());
 
-let usuarios = require('./datos/datosUsuarios.js');
+let usuarios = require('./datos/usuarios');
 
-app.get('/', (req,res)=> {
-    res.send('Todo joia')
-})
 
-app.post('/user',(req,res)=> {
-    usuarios = req.body;
-    console.log(usuarios)
+app.post('/user/new',(req,res)=> {
+    usuarios.push(req.body)
     res.send('se agrego usuario')
 })
 app.put('/user', (req,res)=> {
-    usuarios = req.body;
+    usuarios= req.body;
     res.send('se actualizo usuario')
 })
 
 app.get('/user',(req,res)=> {
-    res.send(usuarios)
+    res.send(usuarios.flat())
 })
 
 const PUERTO = process.env.PORT || 3000;

@@ -1,14 +1,22 @@
 {
-  "name": "login",
+  "name": "api-login",
   "version": "1.0.0",
-  "description": "proyecto de login con api",
+  "description": "",
   "main": "back.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node back.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "facundo ibañez gambarte",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facundoiba95/API-Login.git"
+  },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facundoiba95/API-Login/issues"
+  },
+  "homepage": "https://github.com/facundoiba95/API-Login#readme",
   "dependencies": {
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
